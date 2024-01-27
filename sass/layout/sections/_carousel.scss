@@ -1,0 +1,160 @@
+.carousel {
+  position: relative;
+  background-color: $color-background-section;
+  min-height: 36.5rem;
+
+  padding-block: 3.4rem;
+  padding-inline: 10rem;
+
+  overflow: hidden;
+
+  @include respond(desktop) {
+    padding-inline: 0;
+  }
+
+  @include respond(desktop-md) {
+    row-gap: 3rem;
+  }
+
+  &__heading {
+    max-width: 98rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    font-weight: 100;
+
+    color: inherit;
+
+    font-size: 3rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 98rem;
+    height: 43.5rem;
+    margin: 0 auto;
+
+    @include respond(desktop-md) {
+      position: relative;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+
+    animation: fadeIn 5s;
+
+    &:last-child {
+      justify-content: center;
+    }
+    @include respond(desktop-md) {
+      flex-direction: column;
+
+      gap: 6rem;
+    }
+  }
+
+  &__logo {
+    &--1 {
+      height: 7.4rem;
+    }
+
+    &--3 {
+      height: 4.5rem;
+    }
+
+    &--4 {
+      height: 7.1rem;
+    }
+
+    &--5 {
+      height: 6.4rem;
+    }
+
+    &--6 {
+    }
+
+    &--7 {
+    }
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    align-self: center;
+
+    font-size: 6.4rem;
+
+    cursor: pointer;
+
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  &__prev-btn {
+    left: 10rem;
+  }
+
+  &__next-btn {
+    right: 10rem;
+  }
+
+  &__btn {
+    position: absolute;
+    top: calc(50% + 4rem);
+    transform: translateY(-50%);
+
+    @include respond(desktop-md) {
+      top: 50%;
+    }
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__bullets {
+    grid-area: 3/2/4/3;
+    justify-self: center;
+    transform: translateY(-6rem);
+
+    display: flex;
+    gap: 0.3rem;
+
+    position: absolute;
+    left: 50%;
+    bottom: 3.6rem;
+
+    @include respond(desktop-md) {
+      transform: translate(0);
+    }
+  }
+
+  &__bullet {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__bullet.active {
+    background-color: #333;
+  }
+}

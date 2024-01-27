@@ -1,0 +1,94 @@
+.footer {
+  background-color: $color-background-footer;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 23rem;
+
+    padding-top: 6.4rem;
+    padding-bottom: 4.3rem;
+
+    @include respond(desktop-md) {
+      padding-inline: 3rem;
+    }
+  }
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    font-size: 1.5rem;
+    height: 100%;
+
+    .rules {
+      display: inline-block;
+      align-self: flex-start;
+
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: grey;
+        cursor: pointer;
+      }
+    }
+
+    .copyright-info {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__logo {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  &__contact-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.2rem;
+
+    height: 100%;
+  }
+
+  &__icons {
+    display: flex;
+    align-self: flex-end;
+    gap: 1rem;
+  }
+
+  &__icon {
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+
+    padding-block: 0.8rem;
+
+    font-size: 1.8rem;
+    color: inherit;
+    width: 16rem;
+
+    border: none;
+    border-radius: 0.7rem;
+    background-color: $color-hover;
+
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba(223, 215, 215, 0.986);
+      color: black;
+      cursor: pointer;
+    }
+  }
+}

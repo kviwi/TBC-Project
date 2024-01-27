@@ -1,0 +1,64 @@
+.hero {
+  background-color: $color-background-section;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(/assets/Section-1-image-1.webp);
+    height: 35rem;
+
+    h3 {
+      max-width: 98rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      font-size: 4.2rem;
+      font-weight: bold;
+
+      padding-inline: 3rem;
+
+      :first-child {
+        font-size: 4.2rem;
+      }
+
+      :last-child {
+        font-size: 3.6rem;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+
+    margin-top: 5rem;
+    padding-inline: 3rem;
+  }
+
+  &__link {
+    margin-bottom: 6rem;
+    display: inline-block;
+
+    align-self: flex-start;
+
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $color-hover;
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    width: auto;
+  }
+
+  &__link:hover {
+    color: grey;
+    cursor: pointer;
+  }
+}
