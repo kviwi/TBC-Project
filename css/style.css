@@ -81,7 +81,11 @@ body {
     padding-right: 3rem; }
     .menu__nav a {
       display: block;
-      font-size: 2.4rem; }
+      font-size: 2.4rem;
+      color: #f4f4f4;
+      text-decoration: none; }
+      .menu__nav a:nth-child(3) {
+        color: #00a3e0; }
   .menu__hamburger {
     position: relative;
     z-index: 1000; }
